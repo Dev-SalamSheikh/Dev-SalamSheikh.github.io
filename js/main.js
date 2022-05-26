@@ -34,59 +34,23 @@ let counterFour = 0;
 let counterFive = 0;
 let counterSix = 0;
 
-setInterval(() => {
-  if (counter == 85) {
-    clearInterval();
-  } else {
-    counter += 1;
-    number.innerHTML = counter + "%";
-  }
-}, 19);
+function myCounter(counterValue, counterSpeed, numberBox, counterNumber) {
+  setInterval(() => {
+    if (counterNumber == counterValue) {
+      clearInterval();
+    } else {
+      counterNumber += 1;
+      numberBox.innerHTML = counterNumber + "%";
+    }
+  }, counterSpeed);
+}
 
-setInterval(() => {
-  if (counterTwo == 80) {
-    clearInterval();
-  } else {
-    counterTwo += 1;
-    numberTwo.innerHTML = counter + "%";
-  }
-}, 19);
-
-setInterval(() => {
-  if (counterThree == 50) {
-    clearInterval();
-  } else {
-    counterThree += 1;
-    numberThree.innerHTML = counter + "%";
-  }
-}, 19);
-
-setInterval(() => {
-  if (counterFour == 80) {
-    clearInterval();
-  } else {
-    counterFour += 1;
-    numberFour.innerHTML = counter + "%";
-  }
-}, 19);
-
-setInterval(() => {
-  if (counterFive == 40) {
-    clearInterval();
-  } else {
-    counterFive += 1;
-    numberFive.innerHTML = counter + "%";
-  }
-}, 19);
-
-setInterval(() => {
-  if (counterSix == 50) {
-    clearInterval();
-  } else {
-    counterSix += 1;
-    numberSix.innerHTML = counter + "%";
-  }
-}, 19);
+myCounter(90, 21, number, counter);
+myCounter(80, 22, numberTwo, counterTwo);
+myCounter(50, 26, numberThree, counterThree);
+myCounter(80, 22, numberFour, counterFour);
+myCounter(40, 25, numberFive, counterFive);
+myCounter(70, 22, numberSix, counterSix);
 
 // Swipper Navigation Code
 
@@ -116,7 +80,7 @@ const sr = ScrollReveal({
   distance: "100px",
   duration: 1500,
   delay: 300,
-  reset: true,
+  reset: false,
 });
 sr.reveal(".home");
 sr.reveal(".content", { delay: 300, origin: "top" });
