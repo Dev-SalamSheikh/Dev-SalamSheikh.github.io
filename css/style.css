@@ -1,56 +1,56 @@
 /*================================================== 
 Google Fonts Linkup
 ===================================================*/
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
 
 /*================================================== 
 Base and Core Css Codes
 ===================================================*/
 :root {
-    --green: #27ae60;
-    --second-hue: 219;
-    --container-color: hsl(var(--second-hue), 32%, 12%);
-    --text-color: hsl(var(--second-hue), 8%, 75%);
-    --body-color: hsl(var(--second-hue), 48%, 8%);
+  --green: #27ae60;
+  --second-hue: 219;
+  --container-color: hsl(var(--second-hue), 32%, 12%);
+  --text-color: hsl(var(--second-hue), 8%, 75%);
+  --body-color: hsl(var(--second-hue), 48%, 8%);
 }
 
 * {
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    transition: all .2s linear;
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
 }
 
 html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
-    width: 1rem;
+  width: 1rem;
 }
 
 html::-webkit-scrollbar-track {
-    background: #fff;
+  background: #fff;
 }
 
 html::-webkit-scrollbar-thumb {
-    background: goldenrod;
+  background: goldenrod;
 }
 
 body {
-    background: var(--body-color);
-    position: relative;
+  background: var(--body-color);
+  position: relative;
 }
 
 section {
-    padding: 2rem 9%;
-    min-height: 100vh;
+  padding: 2rem 9%;
+  min-height: 100vh;
 }
 
 /*================================================== 
@@ -58,25 +58,25 @@ Reuse Classes Css
 ===================================================*/
 
 .heading {
-    text-align: center;
-    padding-bottom: 2rem;
-    font-size: 6rem;
-    text-transform: uppercase;
-    color: goldenrod;
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: goldenrod;
 }
 
 header {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 /*================================================== 
@@ -84,12 +84,13 @@ Preloader CSS
 ===================================================*/
 
 #preloader {
-    background: #000 url(../images/circle-loader-gif-2.gif) no-repeat center center;
-    background-size: 20%;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: 100000000;
+  background: #000 url(../images/circle-loader-gif-2.gif) no-repeat center
+    center;
+  background-size: 20%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100000000;
 }
 
 /*================================================== 
@@ -97,83 +98,92 @@ Header Section Css
 ===================================================*/
 
 .navbar {
-    min-height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 9%;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem 9%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+}
+
+.scrolledNav {
+  background-color: var(--container-color);
+  box-shadow: 0px 8px 12px -6px rgba(255, 255, 255, 0.3);
 }
 
 .nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 }
 
 .navbar li::after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    background: goldenrod;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: goldenrod;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
 }
 
 .navbar li:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .nav-branding img {
-    width: 150px;
+  width: 150px;
 }
 
 .hamburger {
-    display: none;
-    cursor: pointer;
+  display: none;
+  cursor: pointer;
 }
 
 .bar {
-    display: block;
-    height: 3px;
-    width: 30px;
-    margin: 5px auto;
-    background-color: gold;
+  display: block;
+  height: 3px;
+  width: 30px;
+  margin: 5px auto;
+  background-color: gold;
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: .8rem 3rem;
-    background: transparent;
-    color: #fff;
-    border: 1px solid goldenrod;
-    font-size: 1.7rem;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 3rem;
+  background: transparent;
+  color: #fff;
+  border: 1px solid goldenrod;
+  font-size: 1.7rem;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .btn:hover {
-    background: goldenrod;
-    letter-spacing: .2rem;
-    border: 1px solid #fff;
-    color: #333;
+  background: goldenrod;
+  letter-spacing: 0.2rem;
+  border: 1px solid #fff;
+  color: #333;
 }
 
 .logo {
-    width: 150px;
+  width: 150px;
 }
 
 .navbar .nav-menu a {
-    font-size: 18px;
-    font-weight: bold;
-    transition: all .2s ease-in-out;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar .nav-menu a:hover {
-    color: #ddd;
+  color: #ddd;
 }
 
 /*================================================== 
@@ -181,89 +191,88 @@ Home or Hero Section Css
 ===================================================*/
 
 .home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .home #particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .home::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .home .content {
-    text-align: center;
-    position: relative;
-    z-index: 1;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .home .content img {
-    height: 25rem;
-    width: 25rem;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 1rem solid goldenrod;
+  height: 25rem;
+  width: 25rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1rem solid goldenrod;
 }
 
 .home .content h3 {
-    font-size: 4rem;
-    color: goldenrod;
-    text-transform: uppercase;
+  font-size: 4rem;
+  color: goldenrod;
+  text-transform: uppercase;
 }
 
 .home .content h3 span {
-    color: #ddd;
-    text-transform: uppercase;
+  color: #ddd;
+  text-transform: uppercase;
 }
 
 .home .content p {
-    color: #ddd;
-    font-size: 2.5rem;
-    line-height: 2;
+  color: #ddd;
+  font-size: 2.5rem;
+  line-height: 2;
 }
 
 .typing-text {
-    color: goldenrod;
+  color: goldenrod;
 }
 
-
 .to-top {
-    position: fixed;
-    right: 35px;
-    bottom: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: goldenrod;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    border-radius: 50%;
-    opacity: 0;
-    transition: all .4s ease-in-out;
+  position: fixed;
+  right: 35px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: goldenrod;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
 }
 
 .to-top i {
-    font-size: 20px;
-    color: #333;
+  font-size: 20px;
+  color: #333;
 }
 
 .to-top.active {
-    opacity: 1;
-    cursor: pointer;
+  opacity: 1;
+  cursor: pointer;
 }
 
 /*================================================== 
@@ -271,67 +280,67 @@ About Section Css
 ===================================================*/
 
 .about .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .about .row .image {
-    text-align: center;
-    flex: 1 1 25rem;
+  text-align: center;
+  flex: 1 1 25rem;
 }
 
 .about .row .image img {
-    width: 30rem;
-    border-radius: .5rem;
-    border: 1rem solid goldenrod;
-    box-shadow: 0 .5rem 1rem var(--container-color);
+  width: 30rem;
+  border-radius: 0.5rem;
+  border: 1rem solid goldenrod;
+  box-shadow: 0 0.5rem 1rem var(--container-color);
 }
 
 .about .row .content {
-    flex: 1 1 55rem;
+  flex: 1 1 55rem;
 }
 
 .about .row .content h3 {
-    color: #ddd;
-    font-size: 4rem;
+  color: #ddd;
+  font-size: 4rem;
 }
 
 .about .row .content h3 span {
-    color: goldenrod;
+  color: goldenrod;
 }
 
 .about .row .content .info {
-    color: #ddd;
-    font-size: 1.7rem;
-    padding: 1rem 0;
-    line-height: 2;
-    font-weight: 500;
+  color: #ddd;
+  font-size: 1.7rem;
+  padding: 1rem 0;
+  line-height: 2;
+  font-weight: 500;
 }
 
 .about .row .content .box-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 0;
 }
 
 .about .row .content .box-container .box {
-    flex: 1 1 20rem;
+  flex: 1 1 20rem;
 }
 
 .about .row .content .box-container .box p {
-    font-size: 1.7rem;
-    color: #fff;
-    padding: .5rem 0;
-    line-height: 2;
+  font-size: 1.7rem;
+  color: #fff;
+  padding: 0.5rem 0;
+  line-height: 2;
 }
 
 .about .row .content .box-container .box p span {
-    color: gold;
-    text-transform: uppercase;
-    margin-right: 10px;
+  color: gold;
+  text-transform: uppercase;
+  margin-right: 10px;
 }
 
 /*================================================== 
@@ -339,37 +348,37 @@ Services Section Css
 ===================================================*/
 
 .services .box-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .services .box-container .box {
-    flex: 1 1 30rem;
-    border-radius: .5rem;
-    background: var(--container-color);
-    padding: 2rem;
-    text-align: center;
-    cursor: pointer;
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  background: var(--container-color);
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
 }
 
 .services .box-container .box i {
-    color: goldenrod;
-    font-size: 5rem;
-    padding: 1rem 0;
+  color: goldenrod;
+  font-size: 5rem;
+  padding: 1rem 0;
 }
 
 .services .box-container .box h3 {
-    color: goldenrod;
-    font-size: 2.5rem;
-    padding-top: 1rem;
+  color: goldenrod;
+  font-size: 2.5rem;
+  padding-top: 1rem;
 }
 
 .services .box-container .box p {
-    color: #ddd;
-    font-size: 1.7rem;
-    padding: 1rem 0;
-    line-height: 2;
+  color: #ddd;
+  font-size: 1.7rem;
+  padding: 1rem 0;
+  line-height: 2;
 }
 
 /*================================================== 
@@ -377,51 +386,58 @@ Recent Works Section Css
 ===================================================*/
 
 .works .box_container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .works .box_container .box_single {
-    flex: 1 1 45rem;
-    border-radius: .5rem;
-    border: 1rem solid goldenrod;
-    position: relative;
-    overflow: hidden;
-    height: 25rem;
+  flex: 1 1 45rem;
+  border-radius: 0.5rem;
+  border: 1rem solid goldenrod;
+  position: relative;
+  overflow: hidden;
+  height: 25rem;
 }
 
 .works .btn {
-    background-color: goldenrod;
-    color: #333;
+  background-color: goldenrod;
+  color: #333;
 }
 
 .works .box_container .box_single img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .works .box_container .box_single .content {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    right: -100%;
-    top: 0;
-    background: #fff9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.works .box_container .box_single .content p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
 }
 
 .works .box_container .box_single:hover .content {
-    right: 0;
+  right: 0;
 }
 
 .works .active {
-    background-color: goldenrod;
-    color: #333;
-    border-color: #ddd;
+  background-color: goldenrod;
+  color: #333;
+  border-color: #ddd;
 }
 
 /*================================================== 
@@ -429,39 +445,39 @@ Skills Section Css
 ===================================================*/
 
 .skills .box-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .skills .box-container .box-parent {
-    flex: 1 1 20rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  flex: 1 1 20rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .skills .box-container .box {
-    flex: 1 1 20rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+  flex: 1 1 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .skills .box-container h5 {
-    font-size: 20px;
-    color: #ddd;
-    font-weight: 600;
+  font-size: 20px;
+  color: #ddd;
+  font-weight: 600;
 }
 
 .skills .box-container i {
-    font-size: 20px;
-    color: white;
+  font-size: 20px;
+  color: white;
 }
 
 .container_two {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 /*================================================== 
@@ -469,27 +485,27 @@ Skills ProgressBar Css
 ===================================================*/
 
 .skill {
-    width: 160px;
-    height: 160px;
-    position: relative;
+  width: 160px;
+  height: 160px;
+  position: relative;
 }
 
 .outer {
-    height: 160px;
-    width: 160px;
-    border-radius: 50%;
-    padding: 20px;
-    background: #fff;
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  padding: 20px;
+  background: #fff;
 }
 
 .inner {
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    display: flex;
-    background: var(--container-color);
-    justify-content: center;
-    align-items: center;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  background: var(--container-color);
+  justify-content: center;
+  align-items: center;
 }
 
 #number,
@@ -498,105 +514,105 @@ Skills ProgressBar Css
 #numberfour,
 #numberfive,
 #numbersix {
-    font-weight: 600;
-    color: #ddd;
-    font-size: 17px;
+  font-weight: 600;
+  color: #ddd;
+  font-size: 17px;
 }
 
 .first circle {
-    fill: none;
-    stroke: url(#GradientColor);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim 2s linear forwards;
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim 2s linear forwards;
 }
 
 .second circle {
-    fill: none;
-    stroke: url(#GradientColor);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim2 2s linear forwards;
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim2 2s linear forwards;
 }
 
 .third circle {
-    fill: none;
-    stroke: url(#GradientColor);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim3 2s linear forwards;
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim3 2s linear forwards;
 }
 
 .fourth circle {
-    fill: none;
-    stroke: url(#GradientColor);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim4 2s linear forwards;
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim4 2s linear forwards;
 }
 
 .fifth circle {
-    fill: none;
-    stroke: url(#GradientColor);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim5 2s linear forwards;
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim5 2s linear forwards;
 }
 
 .sixth circle {
-    fill: none;
-    stroke: url(#GradientColor);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim6 2s linear forwards;
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim6 2s linear forwards;
 }
 
 svg {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @keyframes anim {
-    100% {
-        stroke-dashoffset: 70.8;
-    }
+  100% {
+    stroke-dashoffset: 70.8;
+  }
 }
 
 @keyframes anim2 {
-    100% {
-        stroke-dashoffset: 94.4;
-    }
+  100% {
+    stroke-dashoffset: 94.4;
+  }
 }
 
 @keyframes anim3 {
-    100% {
-        stroke-dashoffset: 236;
-    }
+  100% {
+    stroke-dashoffset: 236;
+  }
 }
 
 @keyframes anim4 {
-    100% {
-        stroke-dashoffset: 94.4;
-    }
+  100% {
+    stroke-dashoffset: 94.4;
+  }
 }
 
 @keyframes anim5 {
-    100% {
-        stroke-dashoffset: 283.2;
-    }
+  100% {
+    stroke-dashoffset: 283.2;
+  }
 }
 
 @keyframes anim6 {
-    100% {
-        stroke-dashoffset: 236;
-    }
+  100% {
+    stroke-dashoffset: 236;
+  }
 }
 
 /*================================================== 
@@ -604,41 +620,40 @@ Testimonials Section Css
 ===================================================*/
 
 .testimonial {
-    padding: 2rem 18%;
-    margin: 0 0 100px 0;
+  padding: 2rem 18%;
+  margin: 0 0 100px 0;
 }
 
 .testimonial .box_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
 .testimonial_card {
-    background-color: var(--container-color);
-    padding: 1.25rem 3.5rem;
-    border-radius: 1.5rem;
-    margin-bottom: 3rem;
-    text-align: center;
+  background-color: var(--container-color);
+  padding: 1.25rem 3.5rem;
+  border-radius: 1.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 .testi_image {
-    width: 60px;
-    border-radius: 3rem;
-    margin-bottom: 1rem;
+  width: 60px;
+  border-radius: 3rem;
+  margin-bottom: 1rem;
 }
 
 .testimonial_name {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: .25rem;
-    color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #fff;
 }
 
 .testimonial_description {
-    font-size: 12px;
-    color: #fff;
+  font-size: 12px;
+  color: #fff;
 }
 
 /*================================================== 
@@ -646,89 +661,86 @@ Swiper Classes Css
 ===================================================*/
 
 .swiper-pagination-bullet {
-    background-color: white;
+  background-color: white;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: goldenrod;
+  background-color: goldenrod;
 }
-
-
 
 /*================================================== 
 Contact Section Css
 ===================================================*/
 
-
 .contact {
-    background-color: var(--container-color);
+  background-color: var(--container-color);
 }
 
 .contact .row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
 .contact .row .image {
-    flex: 1 1 40rem;
+  flex: 1 1 40rem;
 }
 
 .contact .row .image img {
-    width: 100%;
+  width: 100%;
 }
 
 .contact .row form {
-    flex: 1 1 40rem;
-    padding: 2rem 4rem;
-    border-radius: .5rem;
-    background: var(--container-color);
+  flex: 1 1 40rem;
+  padding: 2rem 4rem;
+  border-radius: 0.5rem;
+  background: var(--container-color);
 }
 
 .contact .row form .inputBox {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .contact .row form input::placeholder,
 .contact .row form textarea::placeholder {
-    color: #ddd;
+  color: #ddd;
 }
 
 .contact .row form .inputBox input,
 .contact .row form .box,
 .contact .row form textarea {
-    width: 100%;
-    border-radius: .5rem;
-    font-size: 1.7rem;
-    color: #fff;
-    padding: 1rem;
-    margin: 1rem 0;
-    border: .1rem solid goldenrod;
-    text-transform: none;
-    background-color: var(--container-color);
+  width: 100%;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+  color: #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 0.1rem solid goldenrod;
+  text-transform: none;
+  background-color: var(--container-color);
 }
 
 .contact .row form .inputBox input:focus,
 .contact .row form .box:focus,
 .contact .row form textarea:focus {
-    border-color: goldenrod;
-    color: #ddd;
+  border-color: goldenrod;
+  color: #ddd;
 }
 
 .contact .row form .inputBox input {
-    width: 49%;
+  width: 49%;
 }
 
 .contact .row form textarea {
-    height: 20rem;
-    resize: none;
+  height: 20rem;
+  resize: none;
 }
 
 .contact .row form .btn {
-    margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 /*================================================== 
@@ -736,190 +748,186 @@ Footer Section Css
 ===================================================*/
 
 footer {
-    padding: 15rem 15rem 5rem 15rem;
-    position: relative;
-    background-color: goldenrod;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 15rem 15rem 5rem 15rem;
+  position: relative;
+  background-color: goldenrod;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
 .footer-content {
-    text-align: center;
+  text-align: center;
 }
 
 .footer-content .footer-nav a {
-    padding: 0 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    transition: all .4s ease-in-out;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.4s ease-in-out;
 }
 
 .footer-content .footer-nav a:hover {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .social-links,
 .footer-nav {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .footer-content .social-links i {
-    padding: 10px;
-    font-size: 30px;
-    color: #151C28;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    transition: all .4s ease-in-out;
+  padding: 10px;
+  font-size: 30px;
+  color: #151c28;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  transition: all 0.4s ease-in-out;
 }
 
 .social-media {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .social-media h5 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
 }
 
 .footer-content .social-links i:hover {
-    background-color: #151C28;
-    color: #fff;
+  background-color: #151c28;
+  color: #fff;
 }
 
 .copyright p {
-    font-size: 15px;
-    color: #333;
-    font-weight: 800;
-    padding-top: 50px;
+  font-size: 15px;
+  color: #333;
+  font-weight: 800;
+  padding-top: 50px;
 }
 
 .custom-shape-divider-top-1647527555 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
 .custom-shape-divider-top-1647527555 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
 }
 
 .custom-shape-divider-top-1647527555 .shape-fill {
-    fill: #151C28;
+  fill: #151c28;
 }
 
 /*================================================== 
 Media Queries
 ===================================================*/
-@media (max-width:991px) {
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
 
-    html {
-        font-size: 55%;
-    }
+  body {
+    padding-right: 0;
+  }
 
-    body {
-        padding-right: 0;
-    }
+  section {
+    padding: 2rem;
+  }
 
-    section {
-        padding: 2rem;
-    }
+  footer {
+    padding: 10rem 2rem 5rem 2rem;
+  }
 
-    footer {
-        padding: 10rem 2rem 5rem 2rem;
-    }
-
-    footer img {
-        width: 150px;
-    }
-
+  footer img {
+    width: 150px;
+  }
 }
 
-@media (max-width:450px) {
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
 
-    html {
-        font-size: 50%;
-    }
+  .heading {
+    font-size: 4rem;
+  }
 
-    .heading {
-        font-size: 4rem;
-    }
+  .contact .row form .inputBox input {
+    width: 100%;
+  }
 
-    .contact .row form .inputBox input {
-        width: 100%;
-    }
+  footer {
+    padding: 10rem 2rem 5rem 2rem;
+  }
 
-    footer {
-        padding: 10rem 2rem 5rem 2rem;
-    }
-
-    footer img {
-        width: 150px;
-    }
+  footer img {
+    width: 150px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .hamburger {
-        display: block;
-        z-index: 1000000;
-    }
+  .hamburger {
+    display: block;
+    z-index: 1000000;
+  }
 
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
 
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
 
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 
-    .nav-menu {
-        position: absolute;
-        left: -100%;
-        top: 0;
-        width: 100%;
-        gap: 0;
-        flex-direction: column;
-        background-color: goldenrod;
-        text-align: center;
-        transition: 0.3s;
-        z-index: 100000;
-        padding: 70px 0 0 0;
-    }
+  .nav-menu {
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    gap: 0;
+    flex-direction: column;
+    background-color: goldenrod;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 100000;
+    padding: 70px 0 0 0;
+  }
 
-    .nav-item {
-        margin: 20px 0;
-    }
+  .nav-item {
+    margin: 20px 0;
+  }
 
-    .nav-menu.active {
-        left: 0;
-        padding: 70px 0 0 0;
-    }
+  .nav-menu.active {
+    left: 0;
+    padding: 70px 0 0 0;
+  }
 
-    .nav-branding {
-        width: 100px;
-        z-index: 10000000;
-    }
+  .nav-branding {
+    width: 100px;
+    z-index: 10000000;
+  }
 
-    footer {
-        padding: 10rem 2rem 5rem 2rem;
-    }
+  footer {
+    padding: 10rem 2rem 5rem 2rem;
+  }
 
-    footer img {
-        width: 150px;
-    }
+  footer img {
+    width: 150px;
+  }
 }
