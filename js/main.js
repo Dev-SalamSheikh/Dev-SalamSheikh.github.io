@@ -20,6 +20,20 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
+// Navbar Scroll Code
+
+function handleScroll() {
+  const navbar = document.getElementById("navbar");
+  let scrollValue = window.scrollY;
+  if (scrollValue < 150) {
+    navbar.classList.remove("scrolledNav");
+  } else {
+    navbar.classList.add("scrolledNav");
+  }
+}
+
+window.addEventListener("scroll", handleScroll);
+
 // Work Portfolio Countdown
 let number = document.getElementById("number");
 let numberTwo = document.getElementById("numberTwo");
