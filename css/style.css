@@ -689,9 +689,9 @@ Testimonials Section Css
 }
 
 .testi_image {
-  width: 60px;
-  height: 55px;
-  border-radius: 3rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
   margin-bottom: 1rem;
 }
 
@@ -988,6 +988,10 @@ Media Queries
     display: flex;
     justify-content: center;
     margin: 20px 0;
+  }
+
+  .testimonial {
+    padding: 2rem 10%;
   }
 
   footer {
