@@ -84,13 +84,55 @@ Preloader CSS
 ===================================================*/
 
 #preloader {
-  background: #000 url(../images/circle-loader-gif-2.gif) no-repeat center
-    center;
+  /* background: #000 url(../images/circle-loader-gif-2.gif) no-repeat center
+    center; */
   background-size: 20%;
   height: 100vh;
   width: 100%;
   position: fixed;
   z-index: 100000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.balls {
+  display: flex;
+  flex-direction: row;
+}
+
+.ball {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin: 0 10px;
+  animation: 1s reloader ease infinite;
+}
+
+.blue {
+  background-color: #4285f5;
+}
+
+.red {
+  background-color: #ea4436;
+  animation-delay: 0.25s;
+}
+
+.yellow {
+  background-color: #fbbd06;
+  animation-delay: 0.5s;
+}
+
+.green {
+  background-color: #34a952;
+  animation-delay: 0.75s;
+}
+
+@keyframes reloader {
+  50% {
+    transform: translateY(25px);
+  }
 }
 
 /*================================================== 
@@ -261,8 +303,10 @@ Home or Hero Section Css
   align-items: center;
   padding: 15px;
   border-radius: 50%;
+  border: 0.5px solid #fff;
   opacity: 0;
   transition: all 0.4s ease-in-out;
+  animation: 2s getUp ease infinite;
 }
 
 .to-top i {
@@ -273,6 +317,12 @@ Home or Hero Section Css
 .to-top.active {
   opacity: 1;
   cursor: pointer;
+}
+
+@keyframes getUp {
+  50% {
+    transform: translateY(-25px);
+  }
 }
 
 /*================================================== 
@@ -327,7 +377,7 @@ About Section Css
 }
 
 .about .row .content .box-container .box {
-  flex: 1 1 20rem;
+  flex: 1 1 0rem;
 }
 
 .about .row .content .box-container .box p {
@@ -354,7 +404,7 @@ Services Section Css
 }
 
 .services .box-container .box {
-  flex: 1 1 30rem;
+  flex: 1 1 40rem;
   border-radius: 0.5rem;
   background: var(--container-color);
   padding: 2rem;
@@ -593,7 +643,7 @@ svg {
 
 @keyframes anim3 {
   100% {
-    stroke-dashoffset: 236;
+    stroke-dashoffset: 140;
   }
 }
 
@@ -611,7 +661,7 @@ svg {
 
 @keyframes anim6 {
   100% {
-    stroke-dashoffset: 236;
+    stroke-dashoffset: 140;
   }
 }
 
@@ -899,18 +949,19 @@ Media Queries
     position: absolute;
     left: -100%;
     top: 0;
-    width: 100%;
-    gap: 0;
+    width: 70%;
+    height: 100vh;
     flex-direction: column;
     background-color: goldenrod;
-    text-align: center;
-    transition: 0.3s;
+    align-items: flex-start;
+    justify-content: center;
+    transition: 0.5s;
     z-index: 100000;
     padding: 70px 0 0 0;
   }
 
   .nav-item {
-    margin: 20px 0;
+    margin: 20px 40px;
   }
 
   .nav-menu.active {
@@ -921,6 +972,21 @@ Media Queries
   .nav-branding {
     width: 100px;
     z-index: 10000000;
+  }
+
+  .about .content h3 {
+    text-align: center;
+  }
+
+  .about .content .info {
+    text-align: center;
+  }
+
+  .about .content .button_div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
   }
 
   footer {

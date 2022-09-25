@@ -35,36 +35,52 @@ function handleScroll() {
 window.addEventListener("scroll", handleScroll);
 
 // Work Portfolio Countdown
-let number = document.getElementById("number");
-let numberTwo = document.getElementById("numberTwo");
-let numberThree = document.getElementById("numberThree");
-let numberFour = document.getElementById("numberfour");
-let numberFive = document.getElementById("numberfive");
-let numberSix = document.getElementById("numbersix");
-let counter = 0;
-let counterTwo = 0;
-let counterThree = 0;
-let counterFour = 0;
-let counterFive = 0;
-let counterSix = 0;
 
-function myCounter(counterValue, counterSpeed, numberBox, counterNumber) {
-  setInterval(() => {
-    if (counterNumber == counterValue) {
-      clearInterval();
-    } else {
-      counterNumber += 1;
-      numberBox.innerHTML = counterNumber + "%";
+const skills_section = document.getElementById("skills");
+
+let CounterObserver = new IntersectionObserver(
+  (entries, observer) => {
+    let [entry] = entries;
+    if (!entry.isIntersecting) return;
+
+    let number = document.getElementById("number");
+    let numberTwo = document.getElementById("numberTwo");
+    let numberThree = document.getElementById("numberThree");
+    let numberFour = document.getElementById("numberfour");
+    let numberFive = document.getElementById("numberfive");
+    let numberSix = document.getElementById("numbersix");
+    let counter = 0;
+    let counterTwo = 0;
+    let counterThree = 0;
+    let counterFour = 0;
+    let counterFive = 0;
+    let counterSix = 0;
+
+    function myCounter(counterValue, counterSpeed, numberBox, counterNumber) {
+      setInterval(() => {
+        if (counterNumber == counterValue) {
+          clearInterval();
+        } else {
+          counterNumber += 1;
+          numberBox.innerHTML = counterNumber + "%";
+        }
+      }, counterSpeed);
     }
-  }, counterSpeed);
-}
 
-myCounter(90, 21, number, counter);
-myCounter(80, 22, numberTwo, counterTwo);
-myCounter(50, 26, numberThree, counterThree);
-myCounter(80, 22, numberFour, counterFour);
-myCounter(40, 25, numberFive, counterFive);
-myCounter(70, 22, numberSix, counterSix);
+    myCounter(90, 21, number, counter);
+    myCounter(80, 22, numberTwo, counterTwo);
+    myCounter(70, 26, numberThree, counterThree);
+    myCounter(80, 22, numberFour, counterFour);
+    myCounter(80, 25, numberFive, counterFive);
+    myCounter(70, 22, numberSix, counterSix);
+  },
+  {
+    root: null,
+    threshold: 0.4,
+  }
+);
+
+CounterObserver.observe(skills_section);
 
 // Swipper Navigation Code
 
