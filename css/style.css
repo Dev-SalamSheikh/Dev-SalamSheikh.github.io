@@ -23,6 +23,7 @@ Base and Core Css Codes
   border: none;
   text-decoration: none;
   transition: all 0.2s linear;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -49,7 +50,7 @@ body {
 }
 
 section {
-  padding: 2rem 9%;
+  padding: 2rem 10%;
   min-height: 100vh;
 }
 
@@ -153,7 +154,8 @@ Header Section Css
 
 .scrolledNav {
   background-color: var(--container-color);
-  box-shadow: 0px 8px 12px -6px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 8px 3px -6px rgba(255, 255, 255, 0.2);
+  border-bottom: 1px dashed goldenrod;
 }
 
 .nav-menu {
@@ -200,7 +202,7 @@ Header Section Css
   padding: 0.8rem 3rem;
   background: transparent;
   color: #fff;
-  border: 1px solid goldenrod;
+  border: 1px dashed goldenrod;
   font-size: 1.7rem;
   cursor: pointer;
   font-weight: bold;
@@ -209,7 +211,7 @@ Header Section Css
 
 .btn:hover {
   background: goldenrod;
-  letter-spacing: 0.2rem;
+  /* transform: scale(1.1); */
   border: 1px solid #fff;
   color: #333;
 }
@@ -344,7 +346,7 @@ About Section Css
 .about .row .image img {
   width: 30rem;
   border-radius: 0.5rem;
-  border: 1rem solid goldenrod;
+  border: 3px dashed goldenrod;
   box-shadow: 0 0.5rem 1rem var(--container-color);
 }
 
@@ -397,10 +399,14 @@ About Section Css
 Services Section Css
 ===================================================*/
 
+.services {
+  padding: 5rem 10%;
+}
+
 .services .box-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .services .box-container .box {
@@ -410,6 +416,7 @@ Services Section Css
   padding: 2rem;
   text-align: center;
   cursor: pointer;
+  border: 1px dashed goldenrod;
 }
 
 .services .box-container .box i {
@@ -438,13 +445,13 @@ Recent Works Section Css
 .works .box_container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .works .box_container .box_single {
   flex: 1 1 45rem;
   border-radius: 0.5rem;
-  border: 1rem solid goldenrod;
+  border: 3px dashed goldenrod;
   position: relative;
   overflow: hidden;
   height: 25rem;
@@ -453,6 +460,7 @@ Recent Works Section Css
 .works .btn {
   background-color: goldenrod;
   color: #333;
+  border: 1px dashed #fff;
 }
 
 .works .box_container .box_single img {
@@ -686,6 +694,7 @@ Testimonials Section Css
   border-radius: 1.5rem;
   margin-bottom: 3rem;
   text-align: center;
+  border: 1px dashed goldenrod;
 }
 
 .testi_image {
@@ -769,7 +778,7 @@ Contact Section Css
   color: #fff;
   padding: 1rem;
   margin: 1rem 0;
-  border: 0.1rem solid goldenrod;
+  border: 0.1rem dashed goldenrod;
   text-transform: none;
   background-color: var(--container-color);
 }
@@ -894,6 +903,10 @@ Media Queries
   }
 
   section {
+    padding: 2rem;
+  }
+
+  .services {
     padding: 2rem;
   }
 
