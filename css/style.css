@@ -805,6 +805,8 @@ Contact Section Css
 Location Section Css
 ===================================================*/
 .location {
+  padding: 2rem 10%;
+  min-height: 100vh;
   background-color: var(--container-color);
 }
 
@@ -1010,6 +1012,14 @@ Media Queries
 
   .testimonial {
     padding: 2rem 10%;
+  }
+
+  .location {
+    height: 30vh;
+  }
+
+  .location .map {
+    height: 500px;
   }
 
   footer {
