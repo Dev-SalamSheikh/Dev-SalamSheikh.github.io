@@ -1012,14 +1012,16 @@ Media Queries
 
   .testimonial {
     padding: 2rem 10%;
+    margin: 50px 0;
   }
 
   .location {
-    height: 30vh;
+    padding: 5rem 1rem 8rem 1rem;
+    min-height: 100%;
   }
 
   .location .map {
-    height: 500px;
+    height: 200px;
   }
 
   footer {
