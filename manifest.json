@@ -1,0 +1,38 @@
+{
+  "name": "Portfolio Website",
+  "short_name": "Pwa Portfolio",
+  "theme_color": "#DAA520",
+  "background_color": "#DAA520",
+  "display": "standalone",
+  "scope": ".",
+  "start_url": "index.html",
+  "description": "Salam Sheikh's Personal Portfolio Website",
+  "icons": [
+    {
+      "src": "images/maskable.png",
+      "sizes": "206x206",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/icon256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "images/icon384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "images/icon512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

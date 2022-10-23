@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#DAA520" />
+
+    <!-- Favicon Linkup -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
     <title>Salam Sheikh - Front End Web Developer</title>
 
@@ -19,14 +26,14 @@
       rel="stylesheet"
     />
 
-    <!-- Favicon Linkup -->
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
-
     <!-- Swipper Css Lnkup -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
     <!-- Custom Css File Link  -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Manifest File Link  -->
+    <link rel="manifest" href="manifest.json" />
   </head>
   <body>
     <!-- Preloader -->
@@ -769,6 +776,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
     <script>
+      window.addEventListener("load", () => {
+        registerSW();
+      });
+
+      // Register the Service Worker
+      async function registerSW() {
+        if ("serviceWorker" in navigator) {
+          try {
+            await navigator.serviceWorker.register("serviceworker.js");
+          } catch (e) {
+            console.log("SW registration failed");
+          }
+        }
+      }
+
       var typed = new Typed(".typing-text", {
         strings: [
           "graphic designer",
