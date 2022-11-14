@@ -1019,6 +1019,10 @@ Media Queries
     padding: 70px 0 0 0;
   }
 
+  .nav-branding img {
+    width: 100px;
+  }
+
   .nav-item {
     margin: 20px 40px;
   }
