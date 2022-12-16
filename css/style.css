@@ -998,7 +998,7 @@ Media Queries
     -webkit-backdrop-filter: blur(8.6px);
     justify-content: center;
     transition: 0.5s;
-    z-index: 100000;
+    z-index: 100000000;
     padding: 70px 0 0 0;
   }
 }
@@ -1039,7 +1039,7 @@ Media Queries
     -webkit-backdrop-filter: blur(8.6px);
     justify-content: center;
     transition: 0.5s;
-    z-index: 100000;
+    z-index: 100000000;
     padding: 70px 0 0 0;
   }
 
@@ -1085,7 +1085,7 @@ Media Queries
     -webkit-backdrop-filter: blur(8.6px);
     justify-content: center;
     transition: 0.5s;
-    z-index: 100000;
+    z-index: 100000000;
     padding: 70px 0 0 0;
   }
 
