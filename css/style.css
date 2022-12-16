@@ -1,7 +1,7 @@
 /*================================================== 
 Google Fonts Linkup
 ===================================================*/
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Corinthia:wght@700&family=Sacramento&display=swap");
 
 /*================================================== 
 Base and Core Css Codes
@@ -139,7 +139,7 @@ Header Section Css
 ===================================================*/
 
 .navbar {
-  min-height: 70px;
+  min-height: 90px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -177,10 +177,6 @@ Header Section Css
   width: 100%;
 }
 
-.nav-branding img {
-  width: 150px;
-}
-
 .hamburger {
   display: none;
   cursor: pointer;
@@ -214,18 +210,37 @@ Header Section Css
   color: #333;
 }
 
+.nav-branding {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-branding p {
+  font-size: 40px;
+  font-family: "Sacramento", cursive;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.36);
+  user-select: none;
+}
+
+.nav-branding span {
+  border: 1px solid #fff;
+  margin-top: -10px;
+  width: 65%;
+}
+
 .logo {
   width: 150px;
 }
 
 .navbar .nav-menu a {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   transition: all 0.2s ease-in-out;
 }
 
 .navbar .nav-menu a:hover {
-  color: #ddd;
+  color: gold;
 }
 
 /*================================================== 
@@ -297,21 +312,15 @@ Home or Hero Section Css
   bottom: 30px;
   width: 50px;
   height: 50px;
-  background-color: goldenrod;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 8px;
   border-radius: 50%;
   border: 0.5px solid #fff;
   opacity: 0;
   transition: all 0.4s ease-in-out;
   animation: 2s getUp ease infinite;
-}
-
-.to-top i {
-  font-size: 20px;
-  color: #333;
 }
 
 .to-top.active {
@@ -882,15 +891,8 @@ footer {
   margin-top: 20px;
 }
 
-.footer-content .social-links i {
-  padding: 10px;
-  font-size: 30px;
-  color: #151c28;
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
+.footer-content .social-links img {
   margin-right: 10px;
-  transition: all 0.4s ease-in-out;
 }
 
 .social-media {
@@ -959,7 +961,7 @@ Media Queries
     padding: 10rem 2rem 5rem 2rem;
   }
 
-  footer img {
+  footer .logo {
     width: 150px;
   }
 }
@@ -981,7 +983,7 @@ Media Queries
     padding: 10rem 2rem 5rem 2rem;
   }
 
-  footer img {
+  footer .logo {
     width: 150px;
   }
 }
@@ -1070,7 +1072,7 @@ Media Queries
     padding: 10rem 2rem 5rem 2rem;
   }
 
-  footer img {
+  footer .logo {
     width: 150px;
   }
 }
