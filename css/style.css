@@ -1071,7 +1071,7 @@ Media Queries
   }
 
   .nav-menu {
-    position: absolute;
+    position: fixed;
     left: -100%;
     top: 0;
     width: 70%;
