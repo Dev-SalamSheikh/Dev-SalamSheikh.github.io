@@ -151,9 +151,15 @@ Header Section Css
 }
 
 .scrolledNav {
-  background-color: var(--container-color);
-  box-shadow: 0px 8px 3px -6px rgba(255, 255, 255, 0.2);
-  border-bottom: 1px dashed goldenrod;
+  /* From https://css.glass */
+  background: rgba(21, 28, 40, 0.54);
+  border-radius: 16px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(21, 28, 40, 0.06);
 }
 
 .nav-menu {
@@ -229,10 +235,6 @@ Header Section Css
   width: 65%;
 }
 
-.logo {
-  width: 150px;
-}
-
 .navbar .nav-menu a {
   font-size: 16px;
   font-weight: bold;
@@ -282,7 +284,12 @@ Home or Hero Section Css
   width: 25rem;
   border-radius: 50%;
   object-fit: cover;
-  border: 1rem solid goldenrod;
+  background: rgba(21, 28, 40, 0.24);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(21, 28, 40, 0.06);
+  padding: 2rem;
 }
 
 .home .content h3 {
@@ -317,7 +324,11 @@ Home or Hero Section Css
   align-items: center;
   padding: 8px;
   border-radius: 50%;
-  border: 0.5px solid #fff;
+  background: rgba(21, 28, 40, 0.54);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.4px);
+  -webkit-backdrop-filter: blur(6.4px);
+  border: 1px solid rgba(21, 28, 40, 0.06);
   opacity: 0;
   transition: all 0.4s ease-in-out;
   animation: 2s getUp ease infinite;
@@ -964,6 +975,14 @@ Media Queries
   footer .logo {
     width: 150px;
   }
+
+  .nav-branding p {
+    font-size: 30px;
+  }
+
+  .nav-branding span {
+    width: 45%;
+  }
 }
 
 @media (max-width: 450px) {
@@ -985,6 +1004,14 @@ Media Queries
 
   footer .logo {
     width: 150px;
+  }
+
+  .nav-branding p {
+    font-size: 30px;
+  }
+
+  .nav-branding span {
+    width: 45%;
   }
 }
 
@@ -1013,7 +1040,12 @@ Media Queries
     width: 70%;
     height: 100vh;
     flex-direction: column;
-    background-color: goldenrod;
+    /* From https://css.glass */
+    background: rgba(11, 17, 30, 0.69);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border: 1px solid rgba(11, 17, 30, 0.06);
     align-items: flex-start;
     justify-content: center;
     transition: 0.5s;
@@ -1021,8 +1053,12 @@ Media Queries
     padding: 70px 0 0 0;
   }
 
-  .nav-branding img {
-    width: 100px;
+  .nav-branding p {
+    font-size: 30px;
+  }
+
+  .nav-branding span {
+    width: 45%;
   }
 
   .nav-item {
