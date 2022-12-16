@@ -151,7 +151,6 @@ Header Section Css
 }
 
 .scrolledNav {
-  /* From https://css.glass */
   background: rgba(21, 28, 40, 0.54);
   border-radius: 16px;
   border-top-left-radius: 0px;
@@ -981,7 +980,7 @@ Media Queries
   }
 
   .nav-branding span {
-    width: 45%;
+    width: 75%;
   }
 }
 
@@ -1011,7 +1010,7 @@ Media Queries
   }
 
   .nav-branding span {
-    width: 45%;
+    width: 75%;
   }
 }
 
@@ -1041,12 +1040,13 @@ Media Queries
     height: 100vh;
     flex-direction: column;
     /* From https://css.glass */
-    background: rgba(11, 17, 30, 0.69);
+    background: rgba(21, 28, 40, 0.54);
+    border-radius: 16px;
+    border-top-left-radius: 0px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.5px);
-    -webkit-backdrop-filter: blur(6.5px);
-    border: 1px solid rgba(11, 17, 30, 0.06);
-    align-items: flex-start;
+    backdrop-filter: blur(10.4px);
+    -webkit-backdrop-filter: blur(10.4px);
+    border: 1px solid rgba(21, 28, 40, 0.06);
     justify-content: center;
     transition: 0.5s;
     z-index: 100000;
@@ -1054,11 +1054,11 @@ Media Queries
   }
 
   .nav-branding p {
-    font-size: 30px;
+    font-size: 33px;
   }
 
   .nav-branding span {
-    width: 45%;
+    width: 75%;
   }
 
   .nav-item {
