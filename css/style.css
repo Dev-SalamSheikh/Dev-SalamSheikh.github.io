@@ -788,8 +788,8 @@ Testimonials Section Css
 
 .testimonial_card .company {
   position: absolute;
-  top: 10px;
-  right: 0;
+  top: 3px;
+  right: -15px;
 }
 
 .testi_image {
@@ -1119,6 +1119,10 @@ Media Queries
   .testimonial {
     padding: 2rem 10%;
     margin: 50px 0;
+  }
+
+  .testimonial_card .company img {
+    width: 60px;
   }
 
   .location {
