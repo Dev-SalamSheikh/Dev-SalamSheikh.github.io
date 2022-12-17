@@ -62,7 +62,7 @@ Reuse Classes Css
   text-align: center;
   padding-bottom: 2rem;
   font-size: 6rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: goldenrod;
 }
 
@@ -200,12 +200,15 @@ Header Section Css
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
+  border-radius: 12px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 .btn:hover {
   background: goldenrod;
   /* transform: scale(1.1); */
-  border: 1px solid #fff;
+  border: 0.5px solid #fff;
   color: #333;
 }
 
@@ -220,12 +223,14 @@ Header Section Css
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.36);
   user-select: none;
+  letter-spacing: 0px;
 }
 
 .nav-branding span {
   border: 1px solid #fff;
-  margin-top: -10px;
-  width: 65%;
+  margin-top: -18px;
+  width: 95%;
+  transform: rotate(-7deg);
 }
 
 .navbar .nav-menu a {
@@ -410,6 +415,7 @@ About Section Css
 
 .about .row .content h3 span {
   color: goldenrod;
+  font-family: "Sacramento", cursive;
 }
 
 .about .row .content .info {
@@ -418,6 +424,13 @@ About Section Css
   padding: 1rem 0;
   line-height: 2;
   font-weight: 500;
+}
+
+.about .row .content .info span {
+  font-size: 3rem;
+  color: goldenrod;
+  font-family: "Sacramento", cursive;
+  line-height: 0px;
 }
 
 .about .row .content .box-container {
@@ -440,7 +453,7 @@ About Section Css
 
 .about .row .content .box-container .box p span {
   color: gold;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-right: 10px;
 }
 
@@ -449,7 +462,9 @@ Services Section Css
 ===================================================*/
 
 .services {
-  padding: 5rem 10%;
+  padding: 5rem 10% 15rem 10%;
+  background-color: var(--container-color);
+  margin-top: 5rem;
 }
 
 .services .box-container {
@@ -461,17 +476,15 @@ Services Section Css
 .services .box-container .box {
   flex: 1 1 40rem;
   border-radius: 0.5rem;
-  background: var(--container-color);
+  background: rgba(11, 17, 30, 0.74);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.6px);
+  -webkit-backdrop-filter: blur(8.6px);
   padding: 2rem;
   text-align: center;
   cursor: pointer;
   border: 1px dashed goldenrod;
-}
-
-.services .box-container .box i {
-  color: goldenrod;
-  font-size: 5rem;
-  padding: 1rem 0;
 }
 
 .services .box-container .box h3 {
@@ -507,8 +520,15 @@ Recent Works Section Css
 }
 
 .works .btn {
-  background-color: goldenrod;
-  color: #333;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.6px);
+  -webkit-backdrop-filter: blur(6.6px);
+  color: #fff;
   border: 1px dashed #fff;
 }
 
@@ -735,20 +755,46 @@ Testimonials Section Css
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 3rem;
 }
 
 .testimonial_card {
   background-color: var(--container-color);
-  padding: 1.25rem 3.5rem;
+  padding: 1.2rem 3.5rem;
   border-radius: 1.5rem;
   margin-bottom: 3rem;
   text-align: center;
   border: 1px dashed goldenrod;
+  position: relative;
+}
+
+.testimonial_card span {
+  font-size: 14.5px;
+  color: #fff;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin: 7px 0;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0 !important;
+}
+
+.testimonial_card .company {
+  position: absolute;
+  top: 10px;
+  right: 0;
 }
 
 .testi_image {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
   margin-bottom: 1rem;
 }
@@ -972,10 +1018,6 @@ Media Queries
   .nav-branding p {
     font-size: 30px;
   }
-
-  .nav-branding span {
-    width: 75%;
-  }
 }
 
 @media (max-width: 450px) {
@@ -1001,10 +1043,6 @@ Media Queries
 
   .nav-branding p {
     font-size: 30px;
-  }
-
-  .nav-branding span {
-    width: 75%;
   }
 }
 
@@ -1047,10 +1085,6 @@ Media Queries
 
   .nav-branding p {
     font-size: 33px;
-  }
-
-  .nav-branding span {
-    width: 75%;
   }
 
   .nav-item {
@@ -1102,5 +1136,9 @@ Media Queries
 
   footer .logo {
     width: 150px;
+  }
+
+  .services {
+    margin-top: 0;
   }
 }
