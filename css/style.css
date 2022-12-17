@@ -227,7 +227,8 @@ Header Section Css
 }
 
 .nav-branding span {
-  border: 1px solid #fff;
+  height: 2px;
+  background-color: white;
   margin-top: -18px;
   width: 95%;
   transform: rotate(-7deg);
