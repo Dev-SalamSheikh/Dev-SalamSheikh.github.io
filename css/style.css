@@ -220,10 +220,9 @@ Header Section Css
 .nav-branding p {
   font-size: 40px;
   font-family: "Sacramento", cursive;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.36);
+  font-weight: 400;
   user-select: none;
-  letter-spacing: 0px;
+  letter-spacing: -3px;
 }
 
 .nav-branding span {
@@ -396,12 +395,25 @@ About Section Css
 .about .row .image {
   text-align: center;
   flex: 1 1 25rem;
+  position: relative;
+}
+
+.about .row .image svg {
+  position: absolute;
+  top: -135px;
+  left: 10px;
+  z-index: -1;
+  transition: 1s ease;
+}
+
+.about .row .image:hover svg {
+  left: 50px;
+  top: -80px;
 }
 
 .about .row .image img {
   width: 30rem;
   border-radius: 0.5rem;
-  border: 3px dashed goldenrod;
   box-shadow: 0 0.5rem 1rem var(--container-color);
 }
 
@@ -456,6 +468,15 @@ About Section Css
   color: gold;
   text-transform: capitalize;
   margin-right: 10px;
+}
+
+.about .row .content .button_div .btn {
+  text-transform: capitalize !important;
+}
+
+.about .row .content .button_div .btn:hover {
+  transform: translateX(10px);
+  border: 0.5px dashed goldenrod;
 }
 
 /*================================================== 
@@ -514,7 +535,7 @@ Recent Works Section Css
 .works .box_container .box_single {
   flex: 1 1 45rem;
   border-radius: 0.5rem;
-  border: 3px dashed goldenrod;
+  border: 1.5px dashed goldenrod;
   position: relative;
   overflow: hidden;
   height: 25rem;
@@ -1019,6 +1040,10 @@ Media Queries
   .nav-branding p {
     font-size: 30px;
   }
+
+  .about .row .image svg {
+    display: none;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1043,7 +1068,7 @@ Media Queries
   }
 
   .nav-branding p {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
@@ -1085,7 +1110,7 @@ Media Queries
   }
 
   .nav-branding p {
-    font-size: 33px;
+    font-size: 30px;
   }
 
   .nav-item {
