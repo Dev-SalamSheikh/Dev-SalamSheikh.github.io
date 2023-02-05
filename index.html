@@ -53,11 +53,12 @@
   <body>
     <!-- Preloader -->
 
-    <div id="preloader">
-      <div class="blue ball"></div>
+    <div id="loading">
+      <!-- <div class="blue ball"></div>
       <div class="red ball"></div>
       <div class="yellow ball"></div>
-      <div class="green ball"></div>
+      <div class="green ball"></div> -->
+      <span class="loader"></span>
     </div>
 
     <!-- header section starts  -->
@@ -896,7 +897,12 @@
         <form id="form">
           <div class="inputBox">
             <input id="name" type="text" placeholder="Full Name...." />
-            <input id="phone" type="text" placeholder="Phone Number...." />
+            <input
+              id="phone"
+              type="text"
+              placeholder="Phone Number...."
+              onkeypress="validate()"
+            />
           </div>
 
           <input
@@ -905,6 +911,7 @@
             placeholder="Your Email...."
             class="box"
           />
+
           <input
             id="subject"
             type="text"
@@ -1061,5 +1068,22 @@
 
     <!-- javascript part  -->
     <script src="js/main.js"></script>
+    <script>
+      function validate() {
+        var returnString;
+        var text = document.getElementByID("numbersOnly").value;
+        var regex = /[0-9]|\./;
+        var anArray = text.split("");
+        for (var i = 0; i < anArray.length; i++) {
+          if (!regex.test(anArray[i])) {
+            anArray[i] = "";
+          }
+        }
+        for (var i = 0; i < anArray.length; i++) {
+          returnString += anArray[i];
+        }
+        document.getElementByID("numbersOnly").value = returnString;
+      }
+    </script>
   </body>
 </html>

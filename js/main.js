@@ -148,8 +148,8 @@ const form = document.getElementById("form").addEventListener("submit", (e) => {
 
 // Preloader Animation
 
-const loader = document.getElementById("preloader");
+const loader = document.getElementById("loading");
 
 window.addEventListener("load", function () {
-  loader.style.display = "none";
+  loader.remove();
 });
