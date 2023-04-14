@@ -149,7 +149,25 @@ const form = document.getElementById("form").addEventListener("submit", (e) => {
 // Preloader Animation
 
 const loader = document.getElementById("loading");
-
+document.documentElement.style.overflow = "hidden";
 window.addEventListener("load", function () {
   loader.remove();
+  document.documentElement.style.overflow = "auto";
 });
+
+// validation
+function validate() {
+  var returnString;
+  var text = document.getElementByID("numbersOnly").value;
+  var regex = /[0-9]|\./;
+  var anArray = text.split("");
+  for (var i = 0; i < anArray.length; i++) {
+    if (!regex.test(anArray[i])) {
+      anArray[i] = "";
+    }
+  }
+  for (var i = 0; i < anArray.length; i++) {
+    returnString += anArray[i];
+  }
+  document.getElementByID("numbersOnly").value = returnString;
+}
