@@ -24,12 +24,18 @@ Base and Core Css Codes
   text-decoration: none;
   transition: all 0.2s linear;
   scroll-behavior: smooth;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
 }
 
 html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color:transparent;
 }
 
 html::-webkit-scrollbar {
